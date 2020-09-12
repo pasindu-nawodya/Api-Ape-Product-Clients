@@ -145,14 +145,7 @@ body{
         width: 75%;
     }
 
-    .phoneBorder{
-        margin-top: 100px;
-        border: #008272;
-        border-width: 1;
-    }
-
     .titleAuth{
-        margin-top: 10px;
         font-family: fantasy;
     }
 
