@@ -106,10 +106,10 @@ export default class LoginStockMan extends Component {
                     <div className={'phoneBorder'}>                    
                         <div className={'titleAuth'}>Login</div>
                         <div className={'inputSBox'}>
-                            <input className={'inputS'} type={'text'} placeholder={'Username'} />
+                            <input className={'inputS'} onChange={this.NameSet} type={'email'} placeholder={'Email'} />
                         </div>
                         <div className={'inputSBox'}>
-                            <input className={'inputS'} type={'password'} placeholder={'Password'} />
+                            <input className={'inputS'} onChange={this.passwordSet} type={'password'} placeholder={'Password'} />
                         </div>
                         <br />
                         <div className={'contentBox'}>                            
