@@ -31,6 +31,26 @@ export default class LoginStockMan extends Component {
                         </center>
                     </div>
                     </center>
+                </div>
+                <div className={'phoneBox'}>
+                    <center>
+                    <div className={'phoneBorder'}>                    
+                        <div className={'titleAuth'}>Login</div>
+                        <div className={'inputSBox'}>
+                            <input className={'inputS'} type={'text'} placeholder={'Username'} />
+                        </div>
+                        <div className={'inputSBox'}>
+                            <input className={'inputS'} type={'password'} placeholder={'Password'} />
+                        </div>
+                        <br />
+                        <div className={'contentBox'}>                            
+                            <div className={'text1'}>Forgot Password? </div>
+                        </div>
+                        <center>
+                            <div className={'btnAuth'}>Login</div>
+                        </center>
+                    </div>
+                    </center>
                 </div>                         
             </div>
         )

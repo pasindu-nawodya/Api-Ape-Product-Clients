@@ -131,17 +131,29 @@ body{
     background-color: rgb(24, 82, 24);
 }
 
+.phoneBox{
+    display: none;
+}
+
 @media screen and (max-width: 760px){
+
+    body{
+        background-color:whitesmoke;
+    }
+
     .authBox{
         width: 75%;
     }
 
-    .box{
+    .phoneBorder{
         margin-top: 100px;
+        border: #008272;
+        border-width: 1;
     }
 
     .titleAuth{
         margin-top: 10px;
+        font-family: fantasy;
     }
 
     .leftBox{
@@ -153,11 +165,10 @@ body{
     }
 
     .rightBox{
-        width:100%;
-        float:initial;
-        border: 1;
-        border-bottom-right-radius: 0;
+        display: none;
+    }
+
+    .phoneBox{
+        display: block;
     }
 }
-
-
