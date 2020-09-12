@@ -44,7 +44,7 @@ export default class LoginStockMan extends Component {
         var i = 0;
         var count = this.state.items.length;
         while(count>i){
-            if(this.state.items[i].uemail==this.state.eMail){
+            if(this.state.items[i].uemail===this.state.eMail){
                 this.setState({
                     uid: this.state.items[i]._id
                 })
@@ -60,7 +60,7 @@ export default class LoginStockMan extends Component {
             })
         });
 
-        if(this.state.confirmUser.upassword == this.state.password){
+        if(this.state.confirmUser.upassword === this.state.password){
             alert("Welcome to the System!")
         }else{
             alert("check details again")
