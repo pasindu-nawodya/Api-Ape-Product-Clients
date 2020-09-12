@@ -23,7 +23,6 @@ export default class LoginStockMan extends Component {
                 isLoaded:true,
                 items:json,
             })
-            console.log(json)
         });
     }
 
