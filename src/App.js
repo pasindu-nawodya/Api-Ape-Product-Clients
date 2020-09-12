@@ -1,9 +1,11 @@
 import React from 'react';
+import LoginAdmin from './component/Admin/loginadmin'
 
 function App() {
+
   return (
     <div className="App">
-      <h1>Bot Tharuka</h1>
+      <LoginAdmin />
     </div>
   );
 }
