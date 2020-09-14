@@ -59,13 +59,14 @@ export default class LoginStockMan extends Component {
                 confirmUser:json,
                 isLoadedConfirm:true
             })
+            
+            if(this.state.isLoadedConfirm){
+                alert("Welcome to the System!")
+            }else{
+                alert("check details again")
+            }
         });        
 
-        if(this.state.isLoadedConfirm){
-            alert("Welcome to the System!")
-        }else{
-            alert("check details again")
-        }
     }
 
     render() {
