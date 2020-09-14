@@ -1,11 +1,18 @@
 import React from 'react';
-import LoginAdmin from './component/Admin/loginadmin'
+import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
+import LoginAdmin from './component/Admin/loginadmin';
+
 
 function App() {
 
   return (
-    <div className="App">
-      <LoginAdmin />
+    <div>
+      <Router>
+        <Switch>
+		      <Route path="/" exact component={LoginAdmin} />
+          <Route path="/adminlogin" exact component={LoginAdmin} />
+        </Switch>
+      </Router>
     </div>
   );
 }

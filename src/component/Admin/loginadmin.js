@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import './css/Login.css';
 
 export default class LoginStockMan extends Component {
@@ -7,11 +8,11 @@ export default class LoginStockMan extends Component {
         super(props);
         this.state = {
             items:[],
-            isLoaded:false,
             eMail:'',
             password:'',
             uid:'',
-            confirmUser:[]
+            confirmUser:[],
+            isLoadedConfirm:false
         }
     }
 
@@ -20,7 +21,6 @@ export default class LoginStockMan extends Component {
         .then(res=>res.json())
         .then(json=>{
             this.setState({
-                isLoaded:true,
                 items:json,
             })
         });
@@ -38,7 +38,7 @@ export default class LoginStockMan extends Component {
         })
     }
 
-    checkUser= event =>{
+    checkUser= async event =>{
         
         var i = 0;
         var count = this.state.items.length;
@@ -51,28 +51,26 @@ export default class LoginStockMan extends Component {
             i=i+1;
         }
 
-        fetch('https://apiape-backend.herokuapp.com/user/'+this.state.uid)
+        await fetch('https://apiape-backend.herokuapp.com/user/'+this.state.uid)
         .then(res=>res.json())
         .then(json=>{
             this.setState({
                 confirmUser:json,
+                isLoadedConfirm:true
             })
-        });
+        });        
 
-        if(this.state.confirmUser.upassword === this.state.password){
+        if(this.state.isLoadedConfirm){
             alert("Welcome to the System!")
         }else{
             alert("check details again")
         }
-
     }
-
-
 
     render() {
         return (
             
-            <form >
+            <form onSubmit={this.checkUser}>
             <div className={'authBox'}>
                 <div className={'leftBox'}>
                     <div className={'bgGreen'} />
@@ -115,7 +113,7 @@ export default class LoginStockMan extends Component {
                             <div className={'text1'}>Forgot Password? </div>
                         </div>
                         <center>
-                            <div className={'btnAuth'} onClick={this.checkUser}>Login</div>
+                            <button className={'btnAuth'} >Login</button>
                         </center>
                     </div>
                     </center>
