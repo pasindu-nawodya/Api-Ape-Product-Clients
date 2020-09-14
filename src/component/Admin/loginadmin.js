@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 //import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import './css/Login.css';
 
@@ -93,7 +94,7 @@ export default class LoginStockMan extends Component {
                             <div className={'text1'}>Forgot Password? </div>
                         </div>
                         <center>
-                            <div className={'btnAuth'} onClick={this.checkUser}>Login</div>
+                            <Link to={'/logout'}><div className={'btnAuth'} onClick={this.checkUser}>Login</div></Link>
                         </center>
                     </div>
                     </center>
@@ -113,7 +114,7 @@ export default class LoginStockMan extends Component {
                             <div className={'text1'}>Forgot Password? </div>
                         </div>
                         <center>
-                            <button className={'btnAuth'} >Login</button>
+                            <Link to={'/logout'}><button className={'btnAuth'} onClick={this.checkUser} >Login</button></Link>
                         </center>
                     </div>
                     </center>
